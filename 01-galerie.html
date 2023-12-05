@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie du chien</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/style.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body x-data="{imageAffichee:null, }">
+<body x-data="{imageAffichee: null}"">
     <h1>Galerie</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur qui aliquam nam repudiandae debitis dolor,
          quos atque adipisci incidunt eos quibusdam facilis similique placeat, consequatur ut tempora inventore corrupti.</p>
     <div class="overlay" x-show="imageAffichee @click="imageAffichee=null" @keyup.escape.window = "imageAffichee=null">
         <figure>
-            <img :src="imageAffichee" alt="image 237... un chiot">
+            <img :src="imageAffichee" alt="image de chiot">
         </figure>
     </div>
     <div class="imageSecondaire">
