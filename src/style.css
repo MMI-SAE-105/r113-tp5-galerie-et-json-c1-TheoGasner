@@ -69,3 +69,7 @@
     /* Height auto for keeping the ratio */
     height: auto;
 }
+
+.imageSecondaire {
+    cursor: pointer;
+}
