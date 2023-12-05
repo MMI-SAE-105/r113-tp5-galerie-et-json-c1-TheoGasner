@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="src/styles.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body x-data="{
-    imageAffichee: 'https://picsum.photos/id/237/200/300',
-    }">
+<body x-data="{imageAffichee:null, }">
     <h1>Galerie</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur qui aliquam nam repudiandae debitis dolor,
          quos atque adipisci incidunt eos quibusdam facilis similique placeat, consequatur ut tempora inventore corrupti.</p>
     <div class="overlay" x-show="imageAffichee @click="imageAffichee=null" @keyup.escape.window = "imageAffichee=null">
-        <figure><img src="https://picsum.photos/id/237/200/300" alt="image 237... un chiot"></figure>
+        <figure>
+            <img :src="imageAffichee" alt="image 237... un chiot">
+        </figure>
     </div>
+    <div class="imageSecondaire">
+        <img src="https://picsum.photos/id/236/40/60" alt="maison paradisiaque"
+            @click="imageaffichee='https://picsum.photos/id/236/200/300'">
+        <img src="https://picsum.photos/id/237/40/60" alt="petit chiot"
+            @click="imageaffichee='https://picsum.photos/id/237/200/300'"> 
+    </div> 
 </body>
 </html>
